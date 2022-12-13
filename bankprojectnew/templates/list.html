@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+       <center><p><h1>Registration Form</h1></p></center>
+           <form method="post" id="MemberForm" class="form-horizontal" role="form">
+               {% csrf_token %}
+               <center><div class="container">
+               Full Name:<input type="text" name="NAME" placeholder="Enter your Full Name"><br>
+               Dob:<input type="text" name="DOB" placeholder="Enter your DOB"><br>
+               Gender:<input type="radio" name="value">Female<input type="radio" name="value">Male<br>
+               Phone No:<input type="text" name="PHONE NO" placeholder="Enter your Phone No"><br>
+               Email Id:<input type="text" name="EMAIL ID" placeholder="Enter your Email id"><br>
+               Password:<input type="text" name="PASSWORD" placeholder="Enter your Password"><br>
+               {{form.as_p}}
+               Materials Provided:<br><input type="checkbox" name="value">Debit Card
+               <input type="checkbox" name="value">Credit Card<input type="checkbox" name="value">Cheque book<br>
+               <div class="mx-auto">
+               <a href="{% url 'new' %}" class="btn btn-primary btn-block my_custom_button">Submit</a>
+               </div>
+                <div class="mx-auto">
+                <a href="{% url 'login' %}" class="btn btn-secondary btn-block my_custom_button">Logout</a>
+                </div>
+               </div></center>
+
+         </form>
+
+</div>
+</div>
+</body>
+</html>
